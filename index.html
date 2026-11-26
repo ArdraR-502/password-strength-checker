@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Password Strength Checker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- FIRST PAGE -->
+
+<div class="container" id="entryPage">
+
+    <h1>AI PASSWORD CHECKER</h1>
+
+    <h2>Enter The Password</h2>
+
+    <p>Enter your password to analyse its strength.</p>
+
+    <div class="password-box">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+        >
+
+        <button
+            type="button"
+            class="eye-btn"
+            id="eyeBtn"
+            onclick="togglePassword()"
+            aria-label="Show or hide password"
+        >
+            <!-- eye (password hidden) -->
+            <svg class="eye-open" viewBox="0 0 24 24">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+                <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <!-- eye with a line (password shown) -->
+            <svg class="eye-closed" viewBox="0 0 24 24">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M3 3l18 18"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <button onclick="checkPassword()">
+        CHECK
+    </button>
+
+</div>
+
+
+<!-- SECOND PAGE -->
+
+<div class="container" id="resultPage">
+
+    <h1>PASSWORD ANALYSIS</h1>
+
+    <div id="result"></div>
+
+    <div id="percentage"></div>
+
+    <div id="meter">
+        <div id="bar"></div>
+    </div>
+
+    <div id="suggestions"></div>
+
+    <button onclick="goBack()">BACK</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
